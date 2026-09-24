@@ -3,8 +3,8 @@
     "Nodes":  [
                   {
                       "Node":  "Slave1",
-                      "IP":  "10.246.119.207",
-                      "Hostname":  "NEHA",
+                      "IP":  "",
+                      "Hostname":  "",
                       "CPU":  4,
                       "RAM_Total":  15.69,
                       "RAM_Free":  5.39,
@@ -14,8 +14,8 @@
                   },
                   {
                       "Node":  "Slave2",
-                      "IP":  "10.246.119.48",
-                      "Hostname":  "RUSHDA",
+                      "IP":  "",
+                      "Hostname":  "",
                       "CPU":  8,
                       "RAM_Total":  7.79,
                       "RAM_Free":  1.97,
