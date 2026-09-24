@@ -1,13 +1,13 @@
 $nodes = @(
     @{
         Name = "Slave1"
-        IP = "10.184.79.207"
-        User = "Neha"
+        IP = " "
+        User = " "
     },
     @{
         Name = "Slave2"
-        IP = "10.184.79.48"
-        User = "rushda"
+        IP = ""
+        User = ""
     }
 )
 
