@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NetTwin Digital Twin</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+            margin: 0;
+            padding: 25px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #9ca3af;
+            margin-bottom: 25px;
+        }
+
+        .overall {
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            background: #1f2937;
+            font-size: 24px;
+        }
+
+        .nodes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1f2937;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .online {
+            color: #22c55e;
+        }
+
+        .offline {
+            color: #ef4444;
+        }
+
+        .warning {
+            color: #f59e0b;
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #374151;
+        }
+
+        .section {
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        .ports {
+            word-break: break-word;
+            color: #d1d5db;
+        }
+
+        .updated {
+            color: #9ca3af;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🌐 NetTwin Digital Twin</h1>
+
+<div class="subtitle">
+    Live representation of the physical network
+</div>
+
+<div id="overall" class="overall">
+    Loading...
+</div>
+
+<div id="nodes" class="nodes"></div>
+
+<script>
+
+async function loadTwin() {
+
+    try {
+
+        const response = await fetch(
+            "digital_twin.json?t=" + Date.now()
+        );
+
+        const twin = await response.json();
+
+        const overall = document.getElementById("overall");
+
+        let overallIcon = "🟢";
+
+        if (twin.OverallHealth !== "HEALTHY") {
+            overallIcon = "🟠";
+        }
+
+        overall.innerHTML =
+            overallIcon +
+            " Overall Network Health: <b>" +
+            twin.OverallHealth +
+            "</b>";
+
+        const nodesContainer =
+            document.getElementById("nodes");
+
+        nodesContainer.innerHTML = "";
+
+        for (const node of twin.PhysicalNodes) {
+
+            const connectivity =
+                twin.Connectivity.find(
+                    x => x.Node === node.Name
+                );
+
+            let status = connectivity
+                ? connectivity.Status
+                : "UNKNOWN";
+
+            let statusClass =
+                status === "ONLINE"
+                ? "online"
+                : "offline";
+
+            let statusIcon =
+                status === "ONLINE"
+                ? "🟢"
+                : "🔴";
+
+            const card =
+                document.createElement("div");
+
+            card.className = "card";
+
+            card.innerHTML = `
+
+                <h2>${node.Name}</h2>
+
+                <div class="${statusClass}">
+                    ${statusIcon} ${status}
+                </div>
+
+                <div class="metric">
+                    <span>Hostname</span>
+                    <span>${node.Hostname}</span>
+                </div>
+
+                <div class="metric">
+                    <span>IP</span>
+                    <span>${connectivity ? connectivity.IP : "-"}</span>
+                </div>
+
+                <div class="section">
+                    💻 Resources
+                </div>
+
+                <div class="metric">
+                    <span>CPU</span>
+                    <span>${node.Resources.CPU_Percent}%</span>
+                </div>
+
+                <div class="metric">
+                    <span>RAM Used</span>
+                    <span>${node.Resources.RAM_Used_Percent}%</span>
+                </div>
+
+                <div class="metric">
+                    <span>Disk Used</span>
+                    <span>${node.Resources.Disk_Used_Percent}%</span>
+                </div>
+
+                <div class="section">
+                    🌐 Network
+                </div>
+
+                <div class="metric">
+                    <span>Adapter</span>
+                    <span>${node.Network.Adapter}</span>
+                </div>
+
+                <div class="metric">
+                    <span>Link Speed</span>
+                    <span>${node.Network.LinkSpeed || "N/A"}</span>
+                </div>
+
+                <div class="metric">
+                    <span>Bytes Sent</span>
+                    <span>${node.Network.BytesSent || "N/A"}</span>
+                </div>
+
+                <div class="metric">
+                    <span>Bytes Received</span>
+                    <span>${node.Network.BytesReceived || "N/A"}</span>
+                </div>
+
+                <div class="metric">
+                    <span>TCP Connections</span>
+                    <span>${node.Network.TCPConnections || "N/A"}</span>
+                </div>
+
+                <div class="section">
+                    🔐 Security
+                </div>
+
+                <div class="metric">
+                    <span>Firewall</span>
+                    <span>${node.Security.Firewall || "N/A"}</span>
+                </div>
+
+                <div class="metric">
+                    <span>Defender</span>
+                    <span>${node.Security.Defender || "N/A"}</span>
+                </div>
+
+                <div class="section">
+                    🚪 Listening Ports
+                </div>
+
+                <div class="ports">
+                    ${node.Network.ListeningPorts || "-"}
+                </div>
+
+                <div class="updated">
+                    Last updated:
+                    ${node.LastUpdated}
+                </div>
+            `;
+
+            nodesContainer.appendChild(card);
+        }
+
+    }
+    catch (error) {
+
+        document.getElementById("overall").innerHTML =
+            "🔴 Unable to load Digital Twin data";
+
+        console.error(error);
+    }
+}
+
+loadTwin();
+
+setInterval(loadTwin, 5000);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+    "UpdatedAt":  "2026-08-18 12:15:49",
+    "Nodes":  [
+                  {
+                      "Node":  "Slave1",
+                      "IP":  "10.246.119.207",
+                      "Hostname":  "NEHA",
+                      "CPU":  4,
+                      "RAM_Total":  15.69,
+                      "RAM_Free":  5.39,
+                      "RAM_Used":  10.3,
+                      "Status":  "ONLINE",
+                      "Timestamp":  "2026-08-18 12:13:58"
+                  },
+                  {
+                      "Node":  "Slave2",
+                      "IP":  "10.246.119.48",
+                      "Hostname":  "RUSHDA",
+                      "CPU":  8,
+                      "RAM_Total":  7.79,
+                      "RAM_Free":  1.97,
+                      "RAM_Used":  5.82,
+                      "Status":  "ONLINE",
+                      "Timestamp":  "2026-08-18 12:13:58"
+                  }
+              ]
+}

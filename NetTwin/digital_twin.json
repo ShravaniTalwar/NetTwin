@@ -1,0 +1,81 @@
+{
+    "TwinName":  "NetTwin",
+    "GeneratedAt":  "2026-09-23 12:13:03",
+    "OverallHealth":  "HEALTHY",
+    "PhysicalNodes":  [
+                          {
+                              "Name":  "Slave1",
+                              "Hostname":  "NEHA",
+                              "LastUpdated":  "2026-09-23 12:12:58",
+                              "Health":  "HEALTHY",
+                              "Resources":  {
+                                                "CPU_Percent":  60,
+                                                "RAM_Total_GB":  15.69,
+                                                "RAM_Free_GB":  4.26,
+                                                "RAM_Used_Percent":  72.85,
+                                                "Disk_Total_GB":  248.12,
+                                                "Disk_Free_GB":  101.18,
+                                                "Disk_Used_Percent":  59.22
+                                            },
+                              "Network":  {
+                                              "Adapter":  "Wi-Fi",
+                                              "LinkSpeed":  "72.2 Mbps",
+                                              "PacketsSent":  "",
+                                              "PacketsReceived":  "",
+                                              "BytesSent":  "1218758",
+                                              "BytesReceived":  "1652881",
+                                              "PacketErrors":  "0",
+                                              "PacketDiscards":  "",
+                                              "TCPConnections":  "20",
+                                              "ListeningPorts":  "22;135;139;445;3306;5040;27017;33060;49664;49665;49666;49667;49668;49669;49674"
+                                          },
+                              "Security":  {
+                                               "Firewall":  "ENABLED",
+                                               "Defender":  "ACTIVE"
+                                           }
+                          },
+                          {
+                              "Name":  "Slave2",
+                              "Hostname":  "RUSHDA",
+                              "LastUpdated":  "2026-09-23 12:13:03",
+                              "Health":  "HEALTHY",
+                              "Resources":  {
+                                                "CPU_Percent":  7,
+                                                "RAM_Total_GB":  7.79,
+                                                "RAM_Free_GB":  1.22,
+                                                "RAM_Used_Percent":  84.34,
+                                                "Disk_Total_GB":  174.59,
+                                                "Disk_Free_GB":  25.25,
+                                                "Disk_Used_Percent":  85.54
+                                            },
+                              "Network":  {
+                                              "Adapter":  "Wi-Fi",
+                                              "LinkSpeed":  "72.2 Mbps",
+                                              "PacketsSent":  "",
+                                              "PacketsReceived":  "",
+                                              "BytesSent":  "1974464",
+                                              "BytesReceived":  "3426962",
+                                              "PacketErrors":  "0",
+                                              "PacketDiscards":  "",
+                                              "TCPConnections":  "16",
+                                              "ListeningPorts":  "22;135;139;445;5040;5357;7680;24642;27017;49664;49665;49666;49667;49668;49669;49670;53698"
+                                          },
+                              "Security":  {
+                                               "Firewall":  "ENABLED",
+                                               "Defender":  "ACTIVE"
+                                           }
+                          }
+                      ],
+    "Connectivity":  [
+                         {
+                             "Node":  "Slave1",
+                             "IP":  "10.184.79.207",
+                             "Status":  "ONLINE"
+                         },
+                         {
+                             "Node":  "Slave2",
+                             "IP":  "10.184.79.48",
+                             "Status":  "ONLINE"
+                         }
+                     ]
+}
