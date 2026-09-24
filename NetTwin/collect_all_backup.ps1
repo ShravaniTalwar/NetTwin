@@ -2,13 +2,13 @@ while ($true) {
 $nodes = @(
     @{
         Name = "Slave1"
-        IP = "10.246.119.207"
-        Username = "Neha"
+        IP = ""
+        Username = ""
     },
     @{
         Name = "Slave2"
-        IP = "10.246.119.48"
-        Username = "rushda"
+        IP = ""
+        Username = ""
     }
 )
 
