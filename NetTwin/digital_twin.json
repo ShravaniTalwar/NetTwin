@@ -1,0 +1,115 @@
+﻿{
+    "TwinName":  "NetTwin",
+    "GeneratedAt":  "2026-10-13 09:55:16",
+    "OverallHealth":  "HEALTHY",
+    "PhysicalNodes":  [
+                          {
+                              "Name":  "Slave1",
+                              "Hostname":  "NEHA",
+                              "LastUpdated":  "2026-10-13 09:49:21",
+                              "Health":  "HEALTHY",
+                              "Resources":  {
+                                                "CPU_Percent":  20,
+                                                "RAM_Total_GB":  15.69,
+                                                "RAM_Free_GB":  4.43,
+                                                "RAM_Used_Percent":  71.77,
+                                                "Disk_Total_GB":  248.12,
+                                                "Disk_Free_GB":  98.75,
+                                                "Disk_Used_Percent":  60.2
+                                            },
+                              "Network":  {
+                                              "Adapter":  "Wi-Fi",
+                                              "LinkSpeed":  "72.2 Mbps",
+                                              "PacketsSent":  "43782",
+                                              "PacketsReceived":  "223261",
+                                              "BytesSent":  "10182869",
+                                              "BytesReceived":  "292924952",
+                                              "PacketErrors":  "0",
+                                              "PacketDiscards":  "",
+                                              "TCPConnections":  "31",
+                                              "ListeningPorts":  "22;135;139;445;3306;5040;27017;33060;49664;49665;49666;49667;49668;49669;49674;50819;50820;50821",
+                                              "LatencyMs":  "7.44",
+                                              "PacketLossPercent":  "10",
+                                              "Connectivity":  "ONLINE",
+                                              "BandwidthMbps":  "0.05"
+                                          },
+                              "Security":  {
+                                               "Firewall":  "ENABLED",
+                                               "FirewallProfiles":  "Domain=ENABLED;Private=ENABLED;Public=ENABLED",
+                                               "Defender":  "ACTIVE",
+                                               "DefenderRealtime":  "ACTIVE",
+                                               "SMBv1":  "DISABLED",
+                                               "SecurityRisk":  "LOW",
+                                               "WindowsUpdateStatus":  "NO_APPLICABLE_UPDATES_FOUND",
+                                               "AvailableUpdateCount":  "0",
+                                               "LastUpdateDate":  "2026-09-15",
+                                               "UpdateAssessmentCollectionStatus":  "SUCCESS",
+                                               "SoftwareCount":  79,
+                                               "SoftwareInventoryAvailable":  true,
+                                               "SoftwareInventoryFile":  "C:\\NetTwin\\software_inventory.csv"
+                                           }
+                          },
+                          {
+                              "Name":  "Slave2",
+                              "Hostname":  "RUSHDA",
+                              "LastUpdated":  "2026-10-13 09:49:43",
+                              "Health":  "HEALTHY",
+                              "Resources":  {
+                                                "CPU_Percent":  40,
+                                                "RAM_Total_GB":  7.79,
+                                                "RAM_Free_GB":  1.19,
+                                                "RAM_Used_Percent":  84.72,
+                                                "Disk_Total_GB":  174.59,
+                                                "Disk_Free_GB":  21.28,
+                                                "Disk_Used_Percent":  87.81
+                                            },
+                              "Network":  {
+                                              "Adapter":  "Wi-Fi",
+                                              "LinkSpeed":  "26 Mbps",
+                                              "PacketsSent":  "49188",
+                                              "PacketsReceived":  "86344",
+                                              "BytesSent":  "14127904",
+                                              "BytesReceived":  "631375951",
+                                              "PacketErrors":  "0",
+                                              "PacketDiscards":  "",
+                                              "TCPConnections":  "44",
+                                              "ListeningPorts":  "22;135;139;445;5040;5357;24642;27017;49664;49665;49666;49667;49668;49669;49670;53698",
+                                              "LatencyMs":  "66.56",
+                                              "PacketLossPercent":  "10",
+                                              "Connectivity":  "ONLINE",
+                                              "BandwidthMbps":  "0.06"
+                                          },
+                              "Security":  {
+                                               "Firewall":  "ENABLED",
+                                               "FirewallProfiles":  "Domain=ENABLED;Private=ENABLED;Public=ENABLED",
+                                               "Defender":  "ACTIVE",
+                                               "DefenderRealtime":  "ACTIVE",
+                                               "SMBv1":  "DISABLED",
+                                               "SecurityRisk":  "LOW",
+                                               "WindowsUpdateStatus":  "UPDATES_AVAILABLE",
+                                               "AvailableUpdateCount":  "1",
+                                               "LastUpdateDate":  "2026-09-15",
+                                               "UpdateAssessmentCollectionStatus":  "SUCCESS",
+                                               "SoftwareCount":  40,
+                                               "SoftwareInventoryAvailable":  true,
+                                               "SoftwareInventoryFile":  "C:\\NetTwin\\software_inventory.csv"
+                                           }
+                          }
+                      ],
+    "Connectivity":  [
+                         {
+                             "Node":  "Slave1",
+                             "IP":  "10.11.251.207",
+                             "Status":  "ONLINE"
+                         },
+                         {
+                             "Node":  "Slave2",
+                             "IP":  "10.11.251.48",
+                             "Status":  "ONLINE"
+                         }
+                     ],
+    "SecurityInventory":  {
+                              "SoftwareInventoryFile":  "C:\\NetTwin\\software_inventory.csv",
+                              "SecurityAssessmentFile":  "C:\\NetTwin\\security_assessment.csv"
+                          }
+}

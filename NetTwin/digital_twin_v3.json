@@ -1,0 +1,335 @@
+﻿{
+    "TwinName":  "NetTwin",
+    "ModelVersion":  "3.0",
+    "GeneratedAt":  "2026-10-14 10:31:48",
+    "OverallHealth":  "WARNING_OR_STALE_DATA",
+    "HealthRules":  {
+                        "CPU_Percent":  {
+                                            "Healthy":  "\u003c85",
+                                            "Critical":  "\u003e=95",
+                                            "Warning":  "85 to \u003c95"
+                                        },
+                        "RAM_Used_Percent":  {
+                                                 "Healthy":  "\u003c85",
+                                                 "Critical":  "\u003e=95",
+                                                 "Warning":  "85 to \u003c95"
+                                             },
+                        "Disk_Used_Percent":  {
+                                                  "Healthy":  "\u003c85",
+                                                  "Critical":  "\u003e=95",
+                                                  "Warning":  "85 to \u003c95"
+                                              },
+                        "PacketLossPercent":  {
+                                                  "Healthy":  "\u003c1",
+                                                  "Critical":  "\u003e=5",
+                                                  "Warning":  "1 to \u003c5"
+                                              },
+                        "Score":  "Average of available metric scores: 100 healthy, 60 warning, 20 critical",
+                        "TelemetryFreshnessSeconds":  180,
+                        "Note":  "Proposed project thresholds; missing measurements are excluded, not treated as healthy."
+                    },
+    "PhysicalNodes":  [
+                          {
+                              "Name":  "Master",
+                              "Hostname":  "SHRAVANI",
+                              "IPAddress":  "10.11.251.194",
+                              "Role":  "COLLECTOR",
+                              "LastUpdated":  "2026-10-14 10:31:44",
+                              "TelemetryAgeSeconds":  4,
+                              "TelemetryStatus":  "FRESH",
+                              "Connectivity":  {
+                                                   "Status":  "LOCAL",
+                                                   "SSHStatus":  "LOCAL",
+                                                   "ICMPStatus":  "NOT_MEASURED_BY_V3"
+                                               },
+                              "Health":  "WARNING",
+                              "HealthScore":  73,
+                              "HealthScoreBasis":  "Average of available CPU, RAM, disk and packet-loss metric scores; see HealthRules",
+                              "Resources":  {
+                                                "CPU_Percent":  65,
+                                                "RAM_Total_GB":  7.84,
+                                                "RAM_Free_GB":  0.92,
+                                                "RAM_Used_GB":  6.92,
+                                                "RAM_Used_Percent":  88.27,
+                                                "Disk_Total_GB":  176.07,
+                                                "Disk_Free_GB":  9.59,
+                                                "Disk_Used_Percent":  94.55
+                                            },
+                              "Network":  {
+                                              "Adapter":  "Wi-Fi",
+                                              "AdapterStatus":  "Up",
+                                              "LinkSpeed":  "72.2 Mbps",
+                                              "PacketsSent":  null,
+                                              "PacketsReceived":  null,
+                                              "BytesSent":  null,
+                                              "BytesReceived":  null,
+                                              "PacketErrors":  null,
+                                              "PacketDiscards":  null,
+                                              "TCPConnections":  null,
+                                              "ListeningPorts":  [
+                                                                     135,
+                                                                     139,
+                                                                     445,
+                                                                     5040,
+                                                                     5432,
+                                                                     5433,
+                                                                     27017,
+                                                                     27036,
+                                                                     49664,
+                                                                     49665,
+                                                                     49666,
+                                                                     49667,
+                                                                     49668,
+                                                                     49669,
+                                                                     49670,
+                                                                     50128,
+                                                                     55043,
+                                                                     55044
+                                                                 ],
+                                              "ListeningPortCount":  18,
+                                              "LatencyMs":  null,
+                                              "PacketLossPercent":  null,
+                                              "BandwidthMbps":  1.2245,
+                                              "ReceivedMbps":  1.2245,
+                                              "SentMbps":  0,
+                                              "NetworkUtilizationPercent":  1.7,
+                                              "SampleIntervalSeconds":  13.58,
+                                              "ReceivedPacketErrors":  0,
+                                              "OutboundPacketErrors":  0
+                                          },
+                              "Security":  {
+                                               "Firewall":  "ENABLED",
+                                               "FirewallProfiles":  "Not collected",
+                                               "DefenderRealtime":  "ACTIVE",
+                                               "SMBv1":  "UNKNOWN",
+                                               "SecurityRisk":  "UNKNOWN",
+                                               "WindowsUpdateStatus":  "UNKNOWN",
+                                               "AvailableUpdateCount":  null,
+                                               "LastUpdateDate":  "UNKNOWN",
+                                               "UpdateAssessmentCollectionStatus":  "NOT_COLLECTED",
+                                               "SoftwareCount":  null,
+                                               "VulnerabilityAssessmentStatus":  "NOT_YET_IMPLEMENTED",
+                                               "VulnerabilityFindings":  [
+
+                                                                         ]
+                                           }
+                          },
+                          {
+                              "Name":  "Slave1",
+                              "Hostname":  "NEHA",
+                              "IPAddress":  "10.11.251.207",
+                              "Role":  "MONITORED_NODE",
+                              "LastUpdated":  "2026-10-14 10:31:21",
+                              "TelemetryAgeSeconds":  27,
+                              "TelemetryStatus":  "FRESH",
+                              "Connectivity":  {
+                                                   "Status":  "ONLINE",
+                                                   "SSHStatus":  "REACHABLE",
+                                                   "ICMPStatus":  "NOT_MEASURED_BY_V3"
+                                               },
+                              "Health":  "HEALTHY",
+                              "HealthScore":  100,
+                              "HealthScoreBasis":  "Average of available CPU, RAM, disk and packet-loss metric scores; see HealthRules",
+                              "Resources":  {
+                                                "CPU_Percent":  27,
+                                                "RAM_Total_GB":  15.69,
+                                                "RAM_Free_GB":  4.4,
+                                                "RAM_Used_GB":  11.29,
+                                                "RAM_Used_Percent":  71.96,
+                                                "Disk_Total_GB":  248.12,
+                                                "Disk_Free_GB":  95.27,
+                                                "Disk_Used_Percent":  61.6
+                                            },
+                              "Network":  {
+                                              "Adapter":  "Wi-Fi",
+                                              "AdapterStatus":  "UNKNOWN",
+                                              "LinkSpeed":  "72.2 Mbps",
+                                              "PacketsSent":  99357,
+                                              "PacketsReceived":  204477,
+                                              "BytesSent":  27158279,
+                                              "BytesReceived":  394227019,
+                                              "PacketErrors":  0,
+                                              "PacketDiscards":  null,
+                                              "TCPConnections":  21,
+                                              "ListeningPorts":  [
+                                                                     22,
+                                                                     135,
+                                                                     139,
+                                                                     445,
+                                                                     3306,
+                                                                     5040,
+                                                                     27017,
+                                                                     33060,
+                                                                     42050,
+                                                                     49664,
+                                                                     49665,
+                                                                     49666,
+                                                                     49667,
+                                                                     49668,
+                                                                     49669,
+                                                                     49674
+                                                                 ],
+                                              "ListeningPortCount":  16,
+                                              "LatencyMs":  null,
+                                              "PacketLossPercent":  null,
+                                              "BandwidthMbps":  null,
+                                              "ReceivedMbps":  null,
+                                              "SentMbps":  null,
+                                              "NetworkUtilizationPercent":  null,
+                                              "SampleIntervalSeconds":  null,
+                                              "ReceivedPacketErrors":  null,
+                                              "OutboundPacketErrors":  null
+                                          },
+                              "Security":  {
+                                               "Firewall":  "ENABLED",
+                                               "FirewallProfiles":  "12.1",
+                                               "DefenderRealtime":  "ONLINE",
+                                               "SMBv1":  "0",
+                                               "SecurityRisk":  "UNKNOWN",
+                                               "WindowsUpdateStatus":  "NO_APPLICABLE_UPDATES_FOUND",
+                                               "AvailableUpdateCount":  0,
+                                               "LastUpdateDate":  "2026-09-15",
+                                               "UpdateAssessmentCollectionStatus":  "SUCCESS",
+                                               "SoftwareCount":  79,
+                                               "VulnerabilityAssessmentStatus":  "NOT_YET_IMPLEMENTED",
+                                               "VulnerabilityFindings":  [
+
+                                                                         ]
+                                           }
+                          },
+                          {
+                              "Name":  "Slave2",
+                              "Hostname":  "RUSHDA",
+                              "IPAddress":  "10.11.251.48",
+                              "Role":  "MONITORED_NODE",
+                              "LastUpdated":  "2026-10-14 10:31:39",
+                              "TelemetryAgeSeconds":  9,
+                              "TelemetryStatus":  "FRESH",
+                              "Connectivity":  {
+                                                   "Status":  "ONLINE",
+                                                   "SSHStatus":  "REACHABLE",
+                                                   "ICMPStatus":  "NOT_MEASURED_BY_V3"
+                                               },
+                              "Health":  "WARNING",
+                              "HealthScore":  73,
+                              "HealthScoreBasis":  "Average of available CPU, RAM, disk and packet-loss metric scores; see HealthRules",
+                              "Resources":  {
+                                                "CPU_Percent":  3,
+                                                "RAM_Total_GB":  7.79,
+                                                "RAM_Free_GB":  0.94,
+                                                "RAM_Used_GB":  6.85,
+                                                "RAM_Used_Percent":  87.93,
+                                                "Disk_Total_GB":  174.59,
+                                                "Disk_Free_GB":  21.08,
+                                                "Disk_Used_Percent":  87.93
+                                            },
+                              "Network":  {
+                                              "Adapter":  "Wi-Fi",
+                                              "AdapterStatus":  "UNKNOWN",
+                                              "LinkSpeed":  "72.2 Mbps",
+                                              "PacketsSent":  120894,
+                                              "PacketsReceived":  213349,
+                                              "BytesSent":  192329108,
+                                              "BytesReceived":  269177364,
+                                              "PacketErrors":  0,
+                                              "PacketDiscards":  null,
+                                              "TCPConnections":  18,
+                                              "ListeningPorts":  [
+                                                                     22,
+                                                                     135,
+                                                                     139,
+                                                                     445,
+                                                                     5040,
+                                                                     5357,
+                                                                     7680,
+                                                                     24642,
+                                                                     27017,
+                                                                     42050,
+                                                                     49664,
+                                                                     49665,
+                                                                     49666,
+                                                                     49667,
+                                                                     49668,
+                                                                     49669,
+                                                                     49670,
+                                                                     53698
+                                                                 ],
+                                              "ListeningPortCount":  18,
+                                              "LatencyMs":  null,
+                                              "PacketLossPercent":  null,
+                                              "BandwidthMbps":  null,
+                                              "ReceivedMbps":  null,
+                                              "SentMbps":  null,
+                                              "NetworkUtilizationPercent":  null,
+                                              "SampleIntervalSeconds":  null,
+                                              "ReceivedPacketErrors":  null,
+                                              "OutboundPacketErrors":  null
+                                          },
+                              "Security":  {
+                                               "Firewall":  "ENABLED",
+                                               "FirewallProfiles":  "12.7",
+                                               "DefenderRealtime":  "ONLINE",
+                                               "SMBv1":  "0",
+                                               "SecurityRisk":  "UNKNOWN",
+                                               "WindowsUpdateStatus":  "UPDATES_AVAILABLE",
+                                               "AvailableUpdateCount":  1,
+                                               "LastUpdateDate":  "2026-09-15",
+                                               "UpdateAssessmentCollectionStatus":  "SUCCESS",
+                                               "SoftwareCount":  40,
+                                               "VulnerabilityAssessmentStatus":  "NOT_YET_IMPLEMENTED",
+                                               "VulnerabilityFindings":  [
+
+                                                                         ]
+                                           }
+                          }
+                      ],
+    "Topology":  {
+                     "Nodes":  [
+                                   {
+                                       "Id":  "Master",
+                                       "Hostname":  "SHRAVANI",
+                                       "IPAddress":  "10.11.251.194",
+                                       "Role":  "COLLECTOR"
+                                   },
+                                   {
+                                       "Id":  "Slave1",
+                                       "Hostname":  "NEHA",
+                                       "IPAddress":  "10.11.251.207",
+                                       "Role":  "MONITORED_NODE"
+                                   },
+                                   {
+                                       "Id":  "Slave2",
+                                       "Hostname":  "RUSHDA",
+                                       "IPAddress":  "10.11.251.48",
+                                       "Role":  "MONITORED_NODE"
+                                   }
+                               ],
+                     "Links":  [
+                                   {
+                                       "Source":  "Master",
+                                       "Target":  "Slave1",
+                                       "Type":  "TCP_SSH",
+                                       "TargetIP":  "10.11.251.207",
+                                       "TargetPort":  22,
+                                       "Status":  "REACHABLE",
+                                       "Evidence":  "Test-NetConnection TCP port 22 at build time",
+                                       "PhysicalLayerTopologyVerified":  false
+                                   },
+                                   {
+                                       "Source":  "Master",
+                                       "Target":  "Slave2",
+                                       "Type":  "TCP_SSH",
+                                       "TargetIP":  "10.11.251.48",
+                                       "TargetPort":  22,
+                                       "Status":  "REACHABLE",
+                                       "Evidence":  "Test-NetConnection TCP port 22 at build time",
+                                       "PhysicalLayerTopologyVerified":  false
+                                   }
+                               ],
+                     "Note":  "Links confirm TCP SSH reachability at build time; physical Wi-Fi/LAN topology is not independently discovered."
+                 },
+    "SecurityInventory":  {
+                              "SoftwareInventoryFile":  "C:\\NetTwin\\software_inventory.csv",
+                              "SecurityAssessmentFile":  "C:\\NetTwin\\security_assessment.csv"
+                          }
+}

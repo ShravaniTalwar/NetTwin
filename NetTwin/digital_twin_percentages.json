@@ -1,0 +1,64 @@
+﻿{
+    "GeneratedAt":  "2026-10-13 10:42:15",
+    "TwinName":  "NetTwin",
+    "RawFilesModified":  false,
+    "FormulaDefinitions":  {
+                               "CPU_PERCENT":  "Existing CPU utilization percent from source telemetry, bounded to 0-100.",
+                               "RAM_USED_PERCENT":  "(RAM_TOTAL_GB - RAM_FREE_GB) / RAM_TOTAL_GB * 100; existing percentage used if supplied.",
+                               "DISK_USED_PERCENT":  "(DISK_TOTAL_GB - DISK_FREE_GB) / DISK_TOTAL_GB * 100; existing percentage used if supplied.",
+                               "PACKET_LOSS_PERCENT":  "Existing measured packet-loss percent. Not inferred if absent.",
+                               "NETWORK_UTILIZATION_PERCENT":  "BANDWIDTH_MBPS / LINK_SPEED_Mbps * 100, only when both values are available; capped at 100.",
+                               "SECURITY_POSTURE_PERCENT":  "Passing known checks / known checks * 100 across available firewall, firewall-profile, Defender, Defender real-time, and SMBv1-disabled checks. Limited posture indicator, not a vulnerability score.",
+                               "CONNECTIVITY_SNAPSHOT_PERCENT":  "100 for Online/Connected/Local and 0 for Offline/Disconnected/Unreachable. Single snapshot, not uptime."
+                           },
+    "Metrics":  [
+                    {
+                        "Timestamp":  "2026-10-13 10:33:22",
+                        "NODE":  "Master",
+                        "HOSTNAME":  "SHRAVANI",
+                        "SOURCE":  "master_telemetry.csv",
+                        "CPU_PERCENT":  39,
+                        "RAM_USED_PERCENT":  94.64,
+                        "DISK_USED_PERCENT":  94.04,
+                        "PACKET_LOSS_PERCENT":  null,
+                        "NETWORK_UTILIZATION_PERCENT":  null,
+                        "SECURITY_POSTURE_PERCENT":  100,
+                        "SECURITY_CHECKS_ASSESSED":  2,
+                        "SECURITY_CHECKS_PASSED":  2,
+                        "CONNECTIVITY_SNAPSHOT_PERCENT":  null,
+                        "DATA_STATUS":  "AVAILABLE"
+                    },
+                    {
+                        "Timestamp":  "2026-10-13 10:31:29",
+                        "NODE":  "Slave1",
+                        "HOSTNAME":  "NEHA",
+                        "SOURCE":  "network_data.csv",
+                        "CPU_PERCENT":  11,
+                        "RAM_USED_PERCENT":  72.08,
+                        "DISK_USED_PERCENT":  60.45,
+                        "PACKET_LOSS_PERCENT":  0,
+                        "NETWORK_UTILIZATION_PERCENT":  3,
+                        "SECURITY_POSTURE_PERCENT":  100,
+                        "SECURITY_CHECKS_ASSESSED":  4,
+                        "SECURITY_CHECKS_PASSED":  4,
+                        "CONNECTIVITY_SNAPSHOT_PERCENT":  100,
+                        "DATA_STATUS":  "AVAILABLE"
+                    },
+                    {
+                        "Timestamp":  "2026-10-13 10:31:47",
+                        "NODE":  "Slave2",
+                        "HOSTNAME":  "RUSHDA",
+                        "SOURCE":  "network_data.csv",
+                        "CPU_PERCENT":  14,
+                        "RAM_USED_PERCENT":  84.21,
+                        "DISK_USED_PERCENT":  87.83,
+                        "PACKET_LOSS_PERCENT":  0,
+                        "NETWORK_UTILIZATION_PERCENT":  0,
+                        "SECURITY_POSTURE_PERCENT":  100,
+                        "SECURITY_CHECKS_ASSESSED":  4,
+                        "SECURITY_CHECKS_PASSED":  4,
+                        "CONNECTIVITY_SNAPSHOT_PERCENT":  100,
+                        "DATA_STATUS":  "AVAILABLE"
+                    }
+                ]
+}

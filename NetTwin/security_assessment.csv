@@ -1,0 +1,3 @@
+﻿"Timestamp","Node","Hostname","SoftwareCountReported","LastUpdateDate","WindowsUpdateStatus","AvailableUpdateCount","CollectionStatus"
+"2026-10-12 12:23:57","Slave1","NEHA","80","2026-09-15","NO_APPLICABLE_UPDATES_FOUND","0","SUCCESS"
+"2026-10-12 12:24:24","Slave2","RUSHDA","40","2026-09-15","UPDATES_AVAILABLE","1","SUCCESS"

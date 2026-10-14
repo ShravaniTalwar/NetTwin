@@ -1,0 +1,2 @@
+Timestamp,NODE,IP,PacketsSent,PacketsReceived,PacketLossPercent,MinLatencyMs,MaxLatencyMs,AverageLatencyMs,Status
+2026-10-05 12:46:00,Slave1,10.184.79.207,10,0,100,,,,OFFLINE
